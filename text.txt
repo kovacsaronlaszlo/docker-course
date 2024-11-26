@@ -44,3 +44,5 @@ pl:
 
 
 docker compose up - compose.yaml fájl segítségével elvégzi a fontosabb docker események és elindítja az alkalmazást
+
+docker compose watch - változásokat fogjuk figyelni vele és végrahajtani
