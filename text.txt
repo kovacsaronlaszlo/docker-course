@@ -1,0 +1,29 @@
+docker pull ubuntu -  letölti az ubuntu imaget a localis gépemre
+
+docker run -it ubuntu - futtatja az ubuntu a localis gépemen
+
+COPY . . - lemésol minden a könyvtárunkból a docker image-nek, az első "." az aktuális könyvtár, a második "." pedig az aktuális könyvtá a docker containeren belül
+
+
+docker build -t hello-docker . - felépítjók a hello-docker containert
+
+docker images - imagek felsorolása local gépen
+
+docker run hello-docker - futtatjuk a dockert image-et
+
+docker run -it hello-docker sh - biztosítja, hogy az OP-ban futtassuk az alkalmazást
+
+docker run -p 5173:5173 react-docker - ezzel biztosítani tudjuk, hogy az alkalmazás a 5173-as porton megjelenjen a gépünkön
+
+docker ps - listázza az összes containert ami éppen fut
+
+docker ps -a -  az összs containert megjeleníti amit eddig csináltunk
+
+docker stop [CONTAINER ID or NAME] - az id-val meghatározott containert meg fogja állítani
+
+docker conatiner prune - az összea containert leállítja
+
+docker rm [CONTAINERT ID] töröljük a meghatározott image-et
+
+docker run -p 5173:5173 -v "$(pwd):/app" -v /app/node_modules react-docker - így már minden frissítés amit véghezviszünk frissül a dockerben is
+
