@@ -27,3 +27,8 @@ docker rm [CONTAINERT ID] töröljük a meghatározott image-et
 
 docker run -p 5173:5173 -v "$(pwd):/app" -v /app/node_modules react-docker - így már minden frissítés amit véghezviszünk frissül a dockerben is
 
+docker login - belépés a dockerbe
+
+docker tag react-docker kovacsaronlaszlo/react-docker - publikussá tesszük az image-et
+
+docker push kovacsaronlaszlo/react-docker -  feltöltjük a docker hubra image-et
